@@ -2,3 +2,16 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+
+  /* стили текста */
+  --main-font: 'IBM Plex mono', monospace;
+  --font-size-main: 18px;
+  --font-size-main-title: 116px;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --line-height-main: 130%;
+  --line-height-decoration-element: 139%;
+  --line-height-main-title: 83%;
+}
