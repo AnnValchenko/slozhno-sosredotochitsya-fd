@@ -1,6 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  width: 100%;
+  max-width: 100%;
   font-family: var(--main-font);
   font-weight: var(--font-weight-regular); /*400*/
   font-size: var(--font-size-main); /*18px*/
@@ -12,8 +14,6 @@
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 375px;
-  width: 100%;
-  max-width: 100%;
 }
 
 .header {
@@ -36,14 +36,16 @@
   border-color: var(--accent-color);
 }
 
-.header.decorated-zone::before {
+.header.decorated-zone::before,
+.footer.decorated-zone::before {
   content: '';
   top: 10px;
   right: 10px;
   border-width: 1px 1px 0 0;
 }
 
-.header.decorated-zone::after {
+.header.decorated-zone::after,
+.footer.decorated-zone::after {
   content: '';
   bottom: 10px;
   left: 10px;
@@ -97,25 +99,30 @@
 }
 
 .title {
-  margin-block-start: 65px; 
   color: var(--main-title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: var(--line-height-main-title);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-.title-text {
+.header__title {
+  margin: 65px auto 0 0;
+}
+
+.header__subtitle {
   margin-block-start: 55px;
   margin-block-end: 66px;
   color: var(--secondary-title-color);
   font-weight: var(--font-weight-bold);
   background-color: var(--accent-color);
-  /*line-height: 130%;*/
 }
 
 .content {
-  margin-block-start: 40px;
   padding: 0 10px;
+}
+
+.content-why {
+  margin-block-start: 40px;
 }
 
 .decoration__title {
@@ -125,7 +132,6 @@
 }
 
 .content__title {
- /* margin-block-end: 20px;*/
   color: var(--accent-color);
 }
 
@@ -147,4 +153,49 @@
 
 .content__list-link:hover {
   text-decoration: underline;
+}
+
+.content-what,
+.content-how,
+.content-img {
+  margin-block-start: 50px;
+}
+
+.content__list-subtitle {
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  color: var(--secondary-title-color);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-main);
+  background-color: var(--accent-color);
+}
+
+.content-img__title {
+  color: var(--secondary-title-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-main);
+  background-color: var(--accent-color);
+}
+
+.content-img__section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, min-content);
+  gap: 10px;
+  margin-block-start: 10px;
+}
+
+.content-img__item {
+  width: 355px;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  margin-block-start: 40px;
+  block-size: 100vh;
+}
+
+.footer__title {
+  margin: auto;
 }
