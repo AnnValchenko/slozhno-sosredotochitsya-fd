@@ -5,13 +5,31 @@
 
 :root {
 
-  /* стили текста */
+  /* Cтили текста */
   --main-font: 'IBM Plex mono', monospace;
   --font-size-main: 18px;
-  --font-size-main-title: 116px;
+  --font-size-main-title-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* 116px - 120px */
+  --font-size-main-title-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); /* 120px - 157px */
   --font-weight-bold: 700;
   --font-weight-regular: 400;
   --line-height-main: 130%;
   --line-height-decoration-element: 139%;
   --line-height-main-title: 83%;
+
+  /* Базовые отступы */
+  --small-space: 10px;
+  --medium-space: 20px;
+  --large-space: 40px;
+
+ /* ------ Отступы декоративных элементов в header ------- */
+  --space-decorated-zone: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem); /* 10px - 20px */
+  --space-decoration-element-top: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);   /* 10px-20px */
+  --space-decoration-element-right: clamp(1.1875rem, 0.5911rem + 2.5445vw, 1.8125rem); /* 19px -29px */
+ /* ------------------------------------------------------ */
+  
+  --space-header-menu-top: clamp(4.75rem, -2.1679rem + 29.5165vw, 12rem);
+
+  /*Боковые отступы по всей странице*/
+  --general-padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem); 
+  
 }
