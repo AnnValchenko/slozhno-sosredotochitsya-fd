@@ -22,7 +22,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr 1fr;
-  padding: 0 var(--general-padding);   /* 0 10px; */     /*ВЫНЕСТИ В ПЕРЕМЕННУЮ CLAMP */
+  padding: 0 var(--general-padding);   /* 0 10px; */    
   block-size: 100vh;
 }
 
@@ -288,5 +288,55 @@
 
   .footer {
     margin-block-start: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    min-inline-size: 1024px;
+    min-block-size: 768px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 20px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    justify-content: center;
+    margin-inline-start: 20px;
+  }
+
+  .header__title {
+    margin: 273px auto 0 0;
+  }
+
+  .header__subtitle {
+    margin-inline-start: 513px;
+    margin-block-start: 114px;
+    margin-block-end: 134px;
+  }
+
+  .content-why,
+  .content-how {
+    display: grid;
+    grid-template-columns: 315px 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+
+  .content-what .content__title {
+    width: 315px;
+  }
+
+  .content-what .content__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+
+  .content-what .content__list .content__list-item {
+    margin-block-start: 0;
   }
 }
