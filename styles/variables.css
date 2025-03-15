@@ -2,12 +2,19 @@
 :root {
   /*тёмная тема*/
   --accent-color: #ff0070; 
+  --decoration-zone-color: #ff0070;
+  --button-color: #ff0070;
+  --button-hover: rgba(255, 0, 112, 0.4);
+  --button-focus: #ff0070;
+  --button-active: #ff0070;
   --main-title-color: #db00ff;
   --secondary-title-color: #000028; 
+  --section-title-color: #ff0070;
   --background-color: #000028;
   --primary-text-color: #f1b2ce; /*цвет основного текста */
   --background-img: url(../images/cover-image-dark.png);
-  --border-color-hover: rgba(255, 0, 112, 0.4);
+
+  --decoration-element-display: flex; 
  
   /* Cтили текста */
   --main-font: 'IBM Plex mono', monospace;
@@ -19,6 +26,9 @@
   --line-height-main: 130%;
   --line-height-decoration-element: 139%;
   --line-height-main-title: 83%;
+
+  --big-text-shadow: 4px 4px 0 var(--accent-color);
+  --small-text-shadow: 2px 2px 0 var(--accent-color);
 
   /* Базовые отступы */
   --small-space: 10px;

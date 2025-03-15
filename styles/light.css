@@ -1,38 +1,36 @@
 
 :root.theme-light {
-  --accent-color: #FF8DCB; 
+  --accent-color: #FF8DCB;
+  --decoration-zone-color: #353430; 
+  --button-color: #353430;
+  --button-hover:rgba(50, 49, 45, 0.4);
+  --button-focus:#353430;
+  --button-active: #353430;
   --main-title-color: #FFC2E6;
   --secondary-title-color: #353430; 
+  --section-title-color: #353430;
   --background-color: #FFF1F7;
   --primary-text-color: #353430; /*цвет основного текста */
   --background-img: url(../images/cover-image-light.png);
-  --border-color-hover: rgba(50, 49, 45, 0.4);
+
+  --decoration-element-display: none;
 }
 
-.theme-light .header__decoration-element {
-  display: none;
-}
-
-.theme-light .decorated-zone::before, .decorated-zone::after {
-  border-color: var(--primary-text-color);
-}
-
-.theme-light .header__theme-menu-button {
-  color: var(--primary-text-color);
-}
-
-.theme-light .header__theme-menu-button:hover {
-  border-color: var(--border-color-hover);
-}
-
-.theme-light .header__theme-menu-button:focus-visible {
-  border-color: var(--primary-text-color);
-}
-
-.theme-light .header__theme-menu-button_active {
-  border-color: var(--primary-text-color);
-}
-
-.theme-light .content__title {
-  color: var(--primary-text-color);
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #FF8DCB;
+    --decoration-zone-color: #353430; 
+    --button-color: #353430;
+    --button-hover:rgba(50, 49, 45, 0.4);
+    --button-focus:#353430;
+    --button-active: #353430;
+    --main-title-color: #FFC2E6;
+    --secondary-title-color: #353430; 
+    --section-title-color: #353430;
+    --background-color: #FFF1F7;
+    --primary-text-color: #353430; 
+    --background-img: url(../images/cover-image-light.png);
+  
+    --decoration-element-display: none;
+  }
 }

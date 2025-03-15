@@ -1,12 +1,19 @@
 
 :root.theme-dark {
   --accent-color: #ff0070; 
+  --decoration-zone-color: #ff0070;
+  --button-color: #ff0070;
+  --button-hover: rgba(255, 0, 112, 0.4);
+  --button-focus: #ff0070;
+  --button-active: #ff0070;
   --main-title-color: #db00ff;
   --secondary-title-color: #000028; 
+  --section-title-color: #ff0070;
   --background-color: #000028;
   --primary-text-color: #f1b2ce; /*цвет основного текста */
   --background-img: url(../images/cover-image-dark.png);
-  --border-color-hover: rgba(255, 0, 112, 0.4);
+
+  --decoration-element-display: flex; 
 }
 
 

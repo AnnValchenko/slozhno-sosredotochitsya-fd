@@ -13,7 +13,6 @@
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 375px;
-  min-block-size: 668px;
 }
 
 .header {
@@ -23,6 +22,7 @@
   grid-template-rows: min-content 1fr 1fr;
   padding: 0 var(--general-padding);   /* 0 10px; */    
   block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .decorated-zone::before,
@@ -33,7 +33,7 @@
   width: 25px;
   height: 25px;
   border-style: solid;
-  border-color: var(--accent-color);
+  border-color: var(--decoration-zone-color);
 }
 
 .header.decorated-zone::before,
@@ -53,10 +53,10 @@
 }
 
 .header__decoration-element {
+  display: var(--decoration-element-display);
   position: absolute;
   top: var(--space-decoration-element-top);      /*10px*/
   right: var(--space-decoration-element-right);  /*19px*/
-  display: flex;
 	align-items: center;
   color: var(--accent-color);
   line-height: var(--line-height-decoration-element);
@@ -88,24 +88,24 @@
 .header__theme-menu-button {
   border: solid 1px transparent;
   padding: 0.125rem 0.875rem 0.375rem;
-  color: var(--accent-color);
+  color: var(--button-color);
   line-height: 100%;
   text-transform: lowercase;
   background-color: transparent;
 }
 
 .header__theme-menu-button:hover {
-  border-color: var(--border-color-hover);
+  border-color: var(--button-hover);
 }
 
 .header__theme-menu-button:focus-visible {
   border-width: 0 0 1px 0;
-  border-color: var(--accent-color);
+  border-color: var(--button-focus);
   outline: none;
 }
 
 .header__theme-menu-button_active {
-  border-color: var(--accent-color);
+  border-color: var(--button-active);
   pointer-events: none;
 }
 
@@ -114,7 +114,7 @@
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-main-title-mobile);
   line-height: var(--line-height-main-title);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: var(--big-text-shadow); 
 }
 
 .header__title {
@@ -124,6 +124,9 @@
 .header__subtitle {
   margin-block-start: 55px;
   margin-block-end: 66px;
+}
+
+.header__subtitle-decor {
   color: var(--secondary-title-color);
   font-weight: var(--font-weight-bold);
   background-color: var(--accent-color);
@@ -144,7 +147,7 @@
 }
 
 .content__title {
-  color: var(--accent-color);
+  color: var(--section-title-color);
 }
 
 .content__list-item {
@@ -152,22 +155,25 @@
 }
 
 .content__list-title {
-  margin-block-end: 10px;
   color: var(--secondary-title-color);
   background-color: var(--accent-color);
 }
 
 .content__list-text {
+  margin-block-start: 10px;
   color: var(--primary-text-color);
 }
 
 .content__list-link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: var(--small-text-shadow);
 }
 
 .content__list-link:hover {
-  text-decoration: underline;
+  border-style: solid;
+  border-color: var(--primary-text-color);
+  border-width: 0 0 1px 0;
+
 }
 
 .content__list-link:focus-visible {
@@ -207,6 +213,11 @@
 
 .content-img__item {
   width: 355px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .footer {
@@ -214,22 +225,24 @@
   display: grid;
   margin-block-start: 40px;
   block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .footer__title {
   margin: auto;
+  text-shadow: var(--small-text-shadow);
 }
 
 
 @media (min-width: 768px) {
 .page {
   min-inline-size: 768px;
-  min-block-size: 1024px;
 }
 
   .header {
     margin-block-end: 60px;
     padding: 0 var(--general-padding) 0 0;
+    min-block-size: 1024px;
   }
 
   .title-decor {
@@ -265,7 +278,8 @@
   }
 
   .content-what .content__title {
-    width: 236px;
+    max-width: 236px;
+    width: 100%;
     margin-block-end: 20px;
   }
 
@@ -275,14 +289,6 @@
     grid-template-rows: repeat(3, auto);
     gap: 20px;
     margin-block-start: 20px;
-  }
-
-  .content-img__item {
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    inline-size: 100%;
-    block-size: 100%;
   }
 
   .content-img__item:nth-child(1) {
@@ -303,12 +309,17 @@
 
   .footer {
     margin-block-start: 60px;
+    min-block-size: 1024px;
   }
+
 }
 
 @media (min-width: 1024px) {
   .page {
     min-inline-size: 1024px;
+  }
+
+  .header {
     min-block-size: 768px;
   }
 
@@ -341,7 +352,8 @@
   }
 
   .content-what .content__title {
-    width: 315px;
+    max-width: 315px;
+    width: 100%;
   }
 
   .content-what .content__list {
@@ -353,5 +365,9 @@
 
   .content-what .content__list .content__list-item {
     margin-block-start: 0;
+  }
+
+  .footer {
+    min-block-size: 768px;
   }
 }
