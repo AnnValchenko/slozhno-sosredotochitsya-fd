@@ -22,7 +22,6 @@
   grid-template-rows: min-content 1fr 1fr;
   padding: 0 var(--general-padding);   /* 0 10px; */    
   block-size: 100vh;
-  min-block-size: 668px;
 }
 
 .decorated-zone::before,
@@ -231,7 +230,6 @@
   display: grid;
   margin-block-start: 40px;
   block-size: 100vh;
-  min-block-size: 668px;
 }
 
 .footer__title {
@@ -248,7 +246,6 @@
   .header {
     margin-block-end: 60px;
     padding: 0 var(--general-padding) 0 0;
-    min-block-size: 1024px;
   }
 
   .title-decor {
@@ -326,7 +323,6 @@
 
   .footer {
     margin-block-start: 60px;
-    min-block-size: 1024px;
   }
 
 }
@@ -334,10 +330,6 @@
 @media (min-width: 1024px) {
   .page {
     min-inline-size: 1024px;
-  }
-
-  .header {
-    min-block-size: 768px;
   }
 
   .header__theme-menu {
@@ -382,9 +374,5 @@
 
   .content-what .content__list .content__list-item {
     margin-block-start: 0;
-  }
-
-  .footer {
-    min-block-size: 768px;
   }
 }
